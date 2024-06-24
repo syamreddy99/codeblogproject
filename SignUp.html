@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBlog | Sign Up</title>
+    <link rel="stylesheet" href="css/SignUp.css">
+    <script src="login.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        function openHome(){
+            window.location.href="home.html";
+        }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html">
+            <img src="images/logo1.png" alt="CodeBlog Logo" style="width: 40px; height: 40px;">
+        </a>
+        <h1>CODE-BLOG</h1>
+    </header>
+    <section class="signup-section">
+        <div class="signup-heading">
+            <h2>Create an account</h2>
+            <p>Let's get started!</p>
+        </div>
+        <form class="signup-form">
+            <div class="form-group">
+                <div class="input-field">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="input-field">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-field">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-field">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <img src="images/Closeeye.png" alt="Hide Password" id="eyeClosed" onclick="togglePasswordVisibility()" style="display: none; cursor: pointer;">
+                    <img src="images/Openeye.png" alt="Show Password" id="eyeOpen" onclick="togglePasswordVisibility()" style="cursor: pointer;">
+                </div>
+                <div class="input-field">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <img src="images/Closeeye.png" alt="Hide Password" id="eyeClosed-confirm" onclick="togglePasswordVisibility1()" style="display: none; cursor: pointer;">
+                    <img src="images/Openeye.png" alt="Show Password" id="eyeOpen-confirm" onclick="togglePasswordVisibility1()" style="cursor: pointer;">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button onclick="openHome()" type="submit" class="submit-btn">Sign Up</button>
+                <button onclick="openHome()" type="button" class="alternative-btn">Continue with Email</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
